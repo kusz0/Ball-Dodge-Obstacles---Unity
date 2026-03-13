@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speed = .001f;
+    [SerializeField] float speed = 8f;
 
     private void Start()
     {
@@ -15,10 +15,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        float xValue = Input.GetAxis("Horizontal");
-        float yValue = 0;
-        float zValue = Input.GetAxis("Vertical");
-        transform.Translate(xValue * speed, yValue, zValue * speed);    
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime;
+        float yValue = 0f;
+        float zValue = Input.GetAxis("Vertical") * Time.deltaTime;
+        transform.Translate(xValue * speed , yValue, zValue * speed);    
 
 
 
