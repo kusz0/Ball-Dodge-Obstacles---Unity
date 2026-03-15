@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
         float yValue = 0f;
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime;
         transform.Translate(xValue * speed , yValue, zValue * speed);    
-
-
-
     }
+    void PrintSomeInfo()
+    {
+        Debug.Log("Click Info");
+    }
+
 }
