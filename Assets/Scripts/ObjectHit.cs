@@ -1,17 +1,12 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject hitObject;
-
-    private void Awake()
-    {
-        hitObject = gameObject;   
-    }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"Hit {hitObject.name} by {collision.gameObject.name}");   
+        GetComponent<MeshRenderer>().material.color = Color.black;
+        Debug.Log($"Hit {gameObject.name} by {collision.gameObject.name}");   
     }
 }
