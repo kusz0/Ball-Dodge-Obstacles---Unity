@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        
+        PrintSomeInfo();
     }
     private void Update()
     {
@@ -22,7 +22,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void PrintSomeInfo()
     {
-        Debug.Log("Click Info");
+        Debug.Log("Welcome to the game!");
+        Debug.Log("Move using arrow keys or wasd");
+        Debug.Log("Welcome to the game!");
     }
 
 }
