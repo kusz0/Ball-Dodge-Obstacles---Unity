@@ -11,7 +11,7 @@ public class Scorer : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Front wall")
+        if (collision.gameObject.tag == "Wall")
         {
             score++;
         }
