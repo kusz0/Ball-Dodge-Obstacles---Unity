@@ -1,12 +1,15 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectHit : MonoBehaviour
 {
 
     private void OnCollisionEnter(Collision collision)
     {
-        GetComponent<MeshRenderer>().material.color = Color.black;
-        Debug.Log($"Hit {gameObject.name} by {collision.gameObject.name}");   
+        if(collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

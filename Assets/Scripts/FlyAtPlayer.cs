@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlyAtPlayer : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class FlyAtPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, .5f);
+            
         }
     }
 }
